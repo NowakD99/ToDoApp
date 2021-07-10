@@ -1,0 +1,51 @@
+.toDoCheckbox {
+    height: 100%;
+    width: 50px;
+}
+
+.toDoTask {
+    border: none;
+    background-color: transparent;
+    height: calc(100% - 2px);
+    padding-left: 20px;
+    max-width: 150px;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.toDoBtns button svg {
+    width: 15px;
+    height: 15px;
+}
+
+.toDoBtns {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toDoBtns button {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 10px 10px 0;
+}
+
+.toDoBtns button:hover {
+    background-color: #ffd582;
+}
+
+.toDoBtns .deleteToDoBtn svg {
+    transform: rotate(45deg);
+}
+
+@media screen and (min-width: 550px) {
+    .toDoTask {
+        max-width: unset;
+    }
+
+    .toDoCheckbox {
+        width: 60px;
+    }
+}
