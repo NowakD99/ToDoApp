@@ -9,7 +9,6 @@ import { ReactComponent as AddIcon } from '../../icons/add.svg';
 import { ReactComponent as SettingsIcon } from '../../icons/settings.svg';
 
 
-// const initialState = { toDoList: [], newTaskIsActive: false, filterDoneTask: false }
 
 function reducer(state, action) {
     switch (action.type) {
@@ -84,7 +83,7 @@ function ToDoList() {
                 {state.newTaskIsActive ?
                     <NewToDoItem addNewToDo={addToDoToList}></NewToDoItem>
                     : null}
-                {state.toDoList.length ?
+                {state.toDoList && state.toDoList.length ?
                     state.toDoList.filter((item) => !state.filterDoneTask || item.is_completed === 1)
                         .map((item) => {
                             return <ToDoItem
